@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace challenge.DAL
 {
-    internal class GenericRepository<TEntity> : IRepository<TEntity>
+    public class GenericRepository<TEntity> : IRepository<TEntity>
         where TEntity : class, IBaseEntity        
     {
 
@@ -60,24 +60,16 @@ namespace challenge.DAL
             return _context.SaveChanges();
         }
 
-        public PagedResult<TEntity> GetAll(int currentPage, int pageSize, Func<TEntity, bool> expression)
-        {            
-
-            var result = new PagedResult<TEntity>();
-            result.CurrentPage = currentPage;
-            result.PageSize = pageSize;
-            result.RowCount = CurrentDbSet.Count();
-
-            var pageCount = (double)result.RowCount / pageSize;
-            result.PageCount = (int)Math.Ceiling(pageCount);
-
-            var skip = (currentPage - 1) * pageSize;
-            
-            result.Results = CurrentDbSet.Where(expression).Skip(skip).Take(pageSize).ToList();
-
-            return result;
+        public TEntity Get(Func<TEntity, bool> expression)
+        {
+            return CurrentDbSet.Where(expression).FirstOrDefault();
         }
 
+        public IEnumerable<TEntity> GetAll()
+        {
+            return CurrentDbSet.ToList();
+        }
+       
         public PagedResult<TEntity> Get(int currentPage, int pageSize, IQueryable<TEntity> query)
         {
             var result = new PagedResult<TEntity>();
@@ -117,12 +109,24 @@ namespace challenge.DAL
 
         public PagedResult<TEntity> Get(int currentPage, int pageSize, Func<TEntity, bool> expression)
         {
-            throw new NotImplementedException();
+            var result = new PagedResult<TEntity>();
+            result.CurrentPage = currentPage;
+            result.PageSize = pageSize;
+            result.RowCount = CurrentDbSet.Count();
+
+            var pageCount = (double)result.RowCount / pageSize;
+            result.PageCount = (int)Math.Ceiling(pageCount);
+
+            var skip = (currentPage - 1) * pageSize;
+
+            result.Results = CurrentDbSet.Where(expression).Skip(skip).Take(pageSize).ToList();
+
+            return result;
         }
 
         public TEntity Get(int id)
         {
-            throw new NotImplementedException();
+            return CurrentDbSet.FirstOrDefault(e => e.Id == id);
         }
     }
 }

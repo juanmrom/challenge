@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace challenge.DAL
 {
-    internal class ChallengeContext : DbContext
+    public class ChallengeContext : DbContext
     {
         public ChallengeContext(DbContextOptions options)
             : base(options)

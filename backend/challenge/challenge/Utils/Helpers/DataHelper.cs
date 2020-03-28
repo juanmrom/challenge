@@ -1,5 +1,6 @@
 ﻿using challenge.DAL;
 using challenge.DAL.Entity;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -11,20 +12,23 @@ namespace challenge.Utils.Helpers
 {
     internal class DataHelper
     {
-        public static void Initialize(ChallengeContext context)
+        public static void Initialize(ChallengeContext context, ILogger logger = null)
         {
             context.Database.EnsureCreated();
-
+            logger.LogInformation("Created Database");
 
             if (context.PaymentTypes.Any())
             {
+                logger.LogInformation("The Database alredy exists.");
                 return;
             }
 
+            logger.LogInformation("Load data paymentTypes");
             var paymentTypes = GetPaymentType().ToArray();
             context.AddRange(paymentTypes);
             context.SaveChanges();
 
+            logger.LogInformation("Load data users");
             var users = GetUserFromFile().ToArray();
             var address = GetAddressFromFile().ToArray();
 
@@ -36,6 +40,7 @@ namespace challenge.Utils.Helpers
             context.AddRange(users);
             context.SaveChanges();
 
+            logger.LogInformation("Load data payments");
             var payments = GetPaymentFromFile();
 
             foreach(var payment in payments)
@@ -46,6 +51,8 @@ namespace challenge.Utils.Helpers
 
             context.AddRange(payments);
             context.SaveChanges();
+
+            logger.LogInformation("finisth to initialize database");
         }
 
         private static IEnumerable<PaymentType> GetPaymentType()
@@ -77,8 +84,7 @@ namespace challenge.Utils.Helpers
         }
 
         private static string GetDataFromFile(string fileName)
-        {
-            //var path = $"{AppDomain.CurrentDomain.BaseDirectory}\\Mocks\\{fileName}";
+        {            
             var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Mocks", fileName);
             return File.ReadAllText(path);
         }

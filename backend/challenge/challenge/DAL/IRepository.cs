@@ -12,6 +12,9 @@ namespace challenge.DAL
     public interface IRepository<TEntity>
         where TEntity : IBaseEntity        
     {
+        
+        IEnumerable<TEntity> GetAll();
+        TEntity Get(Func<TEntity, bool> expression);
         PagedResult<TEntity> Get(int currentPage, int pageSize, Func<TEntity, bool> expression);
         PagedResult<TEntity> Get(int currentPage, int pageSize, IQueryable<TEntity> query);
         IQueryable<TEntity> GetQuerable();

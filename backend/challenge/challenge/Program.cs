@@ -16,7 +16,13 @@ namespace challenge
     {
         public static void Main(string[] args)
         {
-            var host = CreateHostBuilder(args).Build();
+            var host = CreateHostBuilder(args)
+                .ConfigureLogging(logging =>
+                {
+                    logging.ClearProviders();
+                    logging.AddConsole();
+                })
+                .Build();
 
             CreateDbIfNotExists(host);
 
@@ -28,16 +34,19 @@ namespace challenge
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
+                var logger = services.GetRequiredService<ILogger<Program>>();
 
                 try
                 {
+                    logger.LogDebug("Create Database Context");
                     var context = services.GetRequiredService<ChallengeContext>();
+                    logger.LogDebug("Created Database Context");
                     //context.Database.EnsureCreated();
-                    DataHelper.Initialize(context);
+                    logger.LogDebug("Initialize Context");
+                    DataHelper.Initialize(context, logger);
                 }
                 catch (Exception ex)
-                {
-                    var logger = services.GetRequiredService<ILogger<Program>>();
+                {                    
                     logger.LogError(ex, "An error occurred creating the DB.");
                 }
             }
