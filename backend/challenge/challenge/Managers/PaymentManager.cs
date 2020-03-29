@@ -1,4 +1,5 @@
 ﻿using challenge.DAL;
+using challenge.DAL.CustomRepository;
 using challenge.DAL.Dto;
 using challenge.DAL.Entity;
 using challenge.Utils;
@@ -7,21 +8,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace challenge.Managers
 {
     public class PaymentManager : IPaymentManager
     {
-        private readonly IRepository<User> _userReposirotry;
-        private readonly IRepository<Payment> _paymentReposirotry;
+        private readonly IPaymentRepository _paymentReposirotry;
         private readonly IRepository<PaymentType> _paymentTypeReposirotry;
 
-        public PaymentManager(IRepository<Payment> paymentRepository
+        public PaymentManager(IPaymentRepository paymentRepository
             , IRepository<PaymentType> paymentTypeRepository
-            , IRepository<User> userRepository)
+            )
         {
             _paymentReposirotry = paymentRepository;
             _paymentTypeReposirotry = paymentTypeRepository;
-            _userReposirotry = userRepository;
         }
 
         public IEnumerable<PaymentTypeDto> GetPaymentTypes()
@@ -32,10 +32,31 @@ namespace challenge.Managers
         }
 
         public PagedResult<PaymentDto> GetPayments(int currentPage, int pageSize, int userId)
-        {
+        {            
             var payments = _paymentReposirotry.Get(currentPage, pageSize, p => p.UserId == userId);
             
             return ConvertToPaymentDto(payments);
+        }
+
+        public void DeletePayments(int[] payments)
+        {
+            _paymentReposirotry.Delete(payments);
+        }
+
+        public void DeletePayment(int id)
+        {
+            _paymentReposirotry.Delete(id);
+        }
+
+        public void UpdatePayment(PaymentDto payment)
+        {
+            var updatePayment = _paymentReposirotry.Get(payment.Id);
+            updatePayment.Amount = payment.Amount;
+            updatePayment.PaymentDate = payment.PaymentDate;
+            updatePayment.PaymentTypeId = payment.PaymentTypeId;
+            updatePayment.PlaceName = payment.PlaceName;
+
+            _paymentReposirotry.Update(updatePayment);
         }
 
         protected PagedResult<PaymentDto> ConvertToPaymentDto(PagedResult<Payment> paymentsResult)
@@ -54,16 +75,17 @@ namespace challenge.Managers
                 paymentDto.Add(
                     new PaymentDto()
                     {
+                        Id = payment.Id,
                         Amount = payment.Amount,
                         PaymentTypeId = payment.PaymentTypeId,
                         PlaceName = payment.PlaceName,
-                        UserId = payment.UserId
+                        PaymentTypeName = payment.PaymentType.Name
                     });
             }
             paymentResutDto.Results = paymentDto;
 
             return paymentResutDto;
-        }
+        }        
 
         protected IEnumerable<PaymentTypeDto> ConvertPaymentTypeToDto(IEnumerable<PaymentType> paymentTypes)
         {

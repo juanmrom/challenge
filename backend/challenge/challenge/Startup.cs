@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using challenge.DAL;
+using challenge.DAL.CustomRepository;
 using challenge.DAL.Entity;
 using challenge.Managers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -54,15 +55,27 @@ namespace challenge
                 };
             });
             
-            services.AddDbContext<ChallengeContext>(options =>
+            services.AddDbContextPool<ChallengeContext>(options =>
             {
-                options.UseInMemoryDatabase(Configuration.GetValue<string>("DataBaseName"));
+                if (Configuration.GetValue<bool>("UseMemoryDataBase"))
+                {
+                    options.UseInMemoryDatabase(Configuration.GetValue<string>("DataBaseName"));
+                }
+                else
+                {
+                    options.UseSqlServer(Configuration.GetValue<string>("DataBaseConnection"));
+                }                                
             });
 
             services.AddScoped<IAuthenticateManager, AuthenticateManager>();
 
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IPaymentRepository, PaymentRepository>();
+            //services.AddScoped<IRepository<Address>, GenericRepository<Address>>();
+            //services.AddScoped<IRepository<PaymentType>, GenericRepository<PaymentType>>();
+            //services.AddScoped<IRepository<User>, GenericRepository<User>>();
             services.AddScoped<IPaymentManager, PaymentManager>();
+            services.AddScoped<IPaymentTypeManager, PaymentTypeManager>();
 
             services.AddCors(options =>
             {
@@ -74,13 +87,7 @@ namespace challenge
                             .AllowAnyMethod();
                     });
             });
-        }
-
-        private DbContextOptionsBuilder<ChallengeContext> GetDataBaseOptions()
-        {
-            return new DbContextOptionsBuilder<ChallengeContext>()
-                .UseInMemoryDatabase("PaymentDB");
-        }
+        }       
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

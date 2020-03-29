@@ -1,0 +1,24 @@
+<form class="example-form example-full-width">
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Payment type</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let paymentType of paymentTypes" [value]="paymentType.paymentId">
+            {{ paymentType.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Place Name</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Amount</mat-label>
+      <input matInput type="number" class="example-right-align">
+      <span matPrefix>$&nbsp;</span>
+      <span matSuffix>.00</span>
+    </mat-form-field> 
+  </div>
+</form>

@@ -2,7 +2,7 @@
   {
     "PlaceName": "Dui Suspendisse Ac PC",
     "Amount": "5,641",
-    "PaymentDate": "10/15/2019",
+    "PaymentDate": "1/15/2019",
     "UserId": 3,
     "PaymentTypeId": 1
   },
@@ -30,8 +30,8 @@
   {
     "PlaceName": "Purus Gravida Industries",
     "Amount": "8,793",
-    "PaymentDate": "10/05/2019",
-    "UserId": 10,
+    "PaymentDate": "1/05/2019",
+    "UserId": 1,
     "PaymentTypeId": 9
   },
   {
@@ -101,7 +101,7 @@
     "PlaceName": "Nulla Consulting",
     "Amount": "5,040",
     "PaymentDate": "07/24/2019",
-    "UserId": 10,
+    "UserId": 1,
     "PaymentTypeId": 9
   },
   {
@@ -149,14 +149,14 @@
   {
     "PlaceName": "Nec Mollis Associates",
     "Amount": "9,222",
-    "PaymentDate": "10/20/2020",
+    "PaymentDate": "1/20/2020",
     "UserId": 7,
     "PaymentTypeId": 2
   },
   {
     "PlaceName": "Nunc Lectus Institute",
     "Amount": "5,789",
-    "PaymentDate": "10/27/2020",
+    "PaymentDate": "1/27/2020",
     "UserId": 7,
     "PaymentTypeId": 5
   },
@@ -178,20 +178,20 @@
     "PlaceName": "Egestas Ligula LLP",
     "Amount": "9,668",
     "PaymentDate": "12/29/2019",
-    "UserId": 10,
+    "UserId": 1,
     "PaymentTypeId": 9
   },
   {
     "PlaceName": "Justo PC",
     "Amount": "6,165",
-    "PaymentDate": "10/12/2020",
+    "PaymentDate": "1/12/2020",
     "UserId": 7,
     "PaymentTypeId": 6
   },
   {
     "PlaceName": "Porttitor Vulputate Posuere Industries",
     "Amount": "9,974",
-    "PaymentDate": "10/30/2019",
+    "PaymentDate": "1/30/2019",
     "UserId": 4,
     "PaymentTypeId": 8
   },
@@ -241,7 +241,7 @@
     "PlaceName": "Massa Inc.",
     "Amount": "8,033",
     "PaymentDate": "09/05/2020",
-    "UserId": 10,
+    "UserId": 1,
     "PaymentTypeId": 3
   },
   {
@@ -288,7 +288,7 @@
   },
   {
     "PlaceName": "Phasellus Elit Pede Industries",
-    "Amount": "6,410",
+    "Amount": "6,41",
     "PaymentDate": "01/27/2021",
     "UserId": 9,
     "PaymentTypeId": 4
@@ -296,7 +296,7 @@
   {
     "PlaceName": "Tellus Incorporated",
     "Amount": "7,606",
-    "PaymentDate": "04/10/2020",
+    "PaymentDate": "04/1/2020",
     "UserId": 5,
     "PaymentTypeId": 3
   },
@@ -317,7 +317,7 @@
   {
     "PlaceName": "Senectus Inc.",
     "Amount": "7,384",
-    "PaymentDate": "02/10/2020",
+    "PaymentDate": "02/1/2020",
     "UserId": 7,
     "PaymentTypeId": 5
   },
@@ -345,7 +345,7 @@
   {
     "PlaceName": "Mi Pede LLC",
     "Amount": "6,095",
-    "PaymentDate": "10/07/2019",
+    "PaymentDate": "1/07/2019",
     "UserId": 7,
     "PaymentTypeId": 6
   },
@@ -395,7 +395,7 @@
     "PlaceName": "Mauris Integer Sem Consulting",
     "Amount": "7,483",
     "PaymentDate": "11/29/2019",
-    "UserId": 10,
+    "UserId": 1,
     "PaymentTypeId": 5
   },
   {
@@ -416,7 +416,7 @@
     "PlaceName": "Sem Pellentesque Ltd",
     "Amount": "8,631",
     "PaymentDate": "06/05/2020",
-    "UserId": 10,
+    "UserId": 1,
     "PaymentTypeId": 3
   },
   {
@@ -549,7 +549,7 @@
     "PlaceName": "Mauris Morbi Non Ltd",
     "Amount": "7,264",
     "PaymentDate": "06/20/2020",
-    "UserId": 10,
+    "UserId": 1,
     "PaymentTypeId": 3
   },
   {
@@ -563,7 +563,7 @@
     "PlaceName": "Erat Etiam LLP",
     "Amount": "6,501",
     "PaymentDate": "11/18/2019",
-    "UserId": 10,
+    "UserId": 1,
     "PaymentTypeId": 7
   },
   {
@@ -589,7 +589,7 @@
   },
   {
     "PlaceName": "Cursus Luctus Ipsum Consulting",
-    "Amount": "8,010",
+    "Amount": "8,01",
     "PaymentDate": "11/22/2019",
     "UserId": 6,
     "PaymentTypeId": 9
@@ -598,7 +598,7 @@
     "PlaceName": "Mi Industries",
     "Amount": "8,667",
     "PaymentDate": "07/11/2020",
-    "UserId": 10,
+    "UserId": 1,
     "PaymentTypeId": 1
   },
   {
@@ -612,13 +612,13 @@
     "PlaceName": "Nunc Lectus Associates",
     "Amount": "7,071",
     "PaymentDate": "06/21/2020",
-    "UserId": 10,
+    "UserId": 1,
     "PaymentTypeId": 1
   },
   {
     "PlaceName": "Massa Foundation",
     "Amount": "6,868",
-    "PaymentDate": "11/10/2019",
+    "PaymentDate": "11/1/2019",
     "UserId": 2,
     "PaymentTypeId": 4
   },
@@ -639,8 +639,8 @@
   {
     "PlaceName": "Ultrices Mauris Foundation",
     "Amount": "6,501",
-    "PaymentDate": "09/10/2019",
-    "UserId": 10,
+    "PaymentDate": "09/1/2019",
+    "UserId": 1,
     "PaymentTypeId": 4
   },
   {
@@ -667,7 +667,7 @@
   {
     "PlaceName": "Sit Amet Inc.",
     "Amount": "5,847",
-    "PaymentDate": "10/14/2020",
+    "PaymentDate": "1/14/2020",
     "UserId": 3,
     "PaymentTypeId": 8
   },

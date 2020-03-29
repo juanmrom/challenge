@@ -12,7 +12,6 @@ namespace challenge.DAL.Entity
         public string Names { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public IEnumerable<PaymentType> CreditCards { get; set; }
-        public Address Direction { get; set; }
+        public virtual Address Direction { get; set; }
     }
 }

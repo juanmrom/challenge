@@ -10,10 +10,10 @@ namespace challenge.DAL.Entity
     {
         [ForeignKey("User")]
         public int UserId { get; set; }
-        [ForeignKey("PaymentTypeId")]
+        [ForeignKey("PaymentType")]
         public int PaymentTypeId { get; set; }
-        public User User { get; set; }
-        public PaymentType PaymentType { get; set; }
+        public virtual User User { get; set; }
+        public virtual PaymentType PaymentType { get; set; }
         public string PlaceName { get; set; }
         public double Amount { get; set; }
         public DateTime PaymentDate { get; set; }

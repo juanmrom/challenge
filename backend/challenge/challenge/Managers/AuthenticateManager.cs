@@ -8,7 +8,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
+using challenge.Utils.Helpers;
 
 namespace challenge.Managers
 {
@@ -25,7 +25,7 @@ namespace challenge.Managers
 
         public string Authenticate(string username, string password)
         {
-            var user = _repository.Get(u => u.UserName == username && u.Pass == password);
+            var user = _repository.Get(u => u.UserName == username && u.Pass == password.Sha256Hash());
             if (user == null)
             {
                 return null;    
@@ -40,7 +40,7 @@ namespace challenge.Managers
                     new Claim(ClaimTypes.Name, user.UserName),
                     new Claim(ClaimTypes.PrimarySid, user.Id.ToString())
                 }),
-                Expires = DateTime.UtcNow.AddHours(1),
+                Expires = DateTime.UtcNow.AddMonths(1),
                 SigningCredentials = new SigningCredentials(
                     new SymmetricSecurityKey(key),
                     SecurityAlgorithms.HmacSha256Signature)

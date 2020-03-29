@@ -11,5 +11,8 @@ namespace challenge.Managers
     {
         IEnumerable<PaymentTypeDto> GetPaymentTypes();
         PagedResult<PaymentDto> GetPayments(int currentPage, int pageSize, int userId);
+        void DeletePayments(int[] payments);
+        void DeletePayment(int id);
+        void UpdatePayment(PaymentDto payment);
     }
 }

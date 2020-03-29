@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace challenge.Utils.Helpers
 {
@@ -15,20 +15,24 @@ namespace challenge.Utils.Helpers
         public static void Initialize(ChallengeContext context, ILogger logger = null)
         {
             context.Database.EnsureCreated();
-            logger.LogInformation("Created Database");
+            logger?.LogInformation("Created Database");
+
+            
 
             if (context.PaymentTypes.Any())
             {
-                logger.LogInformation("The Database alredy exists.");
+                logger?.LogInformation("The Database alredy exists.");
                 return;
             }
+            
+            
 
-            logger.LogInformation("Load data paymentTypes");
+            logger?.LogInformation("Load data paymentTypes");
             var paymentTypes = GetPaymentType().ToArray();
             context.AddRange(paymentTypes);
             context.SaveChanges();
 
-            logger.LogInformation("Load data users");
+            logger?.LogInformation("Load data users");
             var users = GetUserFromFile().ToArray();
             var address = GetAddressFromFile().ToArray();
 
@@ -40,7 +44,7 @@ namespace challenge.Utils.Helpers
             context.AddRange(users);
             context.SaveChanges();
 
-            logger.LogInformation("Load data payments");
+            logger?.LogInformation("Load data payments");
             var payments = GetPaymentFromFile();
 
             foreach(var payment in payments)
@@ -52,7 +56,9 @@ namespace challenge.Utils.Helpers
             context.AddRange(payments);
             context.SaveChanges();
 
-            logger.LogInformation("finisth to initialize database");
+            
+
+            logger?.LogInformation("finisth to initialize database");
         }
 
         private static IEnumerable<PaymentType> GetPaymentType()

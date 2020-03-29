@@ -1,38 +1,29 @@
 [
-  {
-    "id": 1,
+  {    
     "name": "Home"
   },
   {
-    "id": 2,
     "name": "Transport"
   },
   {
-    "id": 3,
     "name": "Gas"
   },
   {
-    "id": 4,
     "name": "Clothing"
   },
   {
-    "id": 5,
     "name": "Dining"
   },
   {
-    "id": 6,
     "name": "Beauty"
   },
   {
-    "id": 7,
     "name": "Phone"
   },
   {
-    "id": 8,
     "name": "Entertainment"
   },
   {
-    "id": 9,
     "name": "Taxi"
   }
 ]

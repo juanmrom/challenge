@@ -16,62 +16,64 @@ namespace challenge.DAL
         where TEntity : class, IBaseEntity        
     {
 
-        protected readonly DbContext _context;
+        protected ChallengeContext _context;
 
         public GenericRepository(ChallengeContext context)
         {
             _context = context;
         }
 
-        protected DbSet<TEntity> CurrentDbSet
-        {
-            get
-            {
-                return _context.Set<TEntity>();
-            }
-        }
+        //protected DbSet<TEntity> CurrentDbSet
+        //{
+        //    get
+        //    {
+        //        return _context.Set<TEntity>();
+        //    }
+        //}
 
         public TEntity Add(TEntity entity)
         {
-            CurrentDbSet.Add(entity);
+            _context.Set<TEntity>().Add(entity);
             _context.SaveChanges();
 
             return entity;
         }
 
-        public int Add(params TEntity[] entities)
+        public virtual int Add(params TEntity[] entities)
         {
-            CurrentDbSet.AddRange(entities);
+            _context.Set<TEntity>().AddRange(entities);
             
             return _context.SaveChanges();
         }
 
-        public int Delete(int id)
+        public virtual int Delete(int id)
         {
-            var entity = CurrentDbSet.FirstOrDefault(e => e.Id == id);
+            var entity = _context.Set<TEntity>().FirstOrDefault(e => e.Id == id);
             if (entity == null)
             {
                 var message = $"The entity with id {id}, not exist.\nEntity: {entity.ToString()}";
                  
                 RepositoryExceptionHelper.ThrowRepositoryException(message, "REP-001");
             }
-            CurrentDbSet.Remove(entity);
+            _context.Set<TEntity>().Remove(entity);
 
             return _context.SaveChanges();
         }
 
-        public TEntity Get(Func<TEntity, bool> expression)
+        public virtual TEntity Get(Func<TEntity, bool> expression)
         {
-            return CurrentDbSet.Where(expression).FirstOrDefault();
+            return _context.Set<TEntity>().Where(expression).FirstOrDefault();
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public virtual IEnumerable<TEntity> GetAll()
         {
-            return CurrentDbSet.ToList();
+            return _context.Set<TEntity>().ToList();
         }
        
-        public PagedResult<TEntity> Get(int currentPage, int pageSize, IQueryable<TEntity> query)
+        public virtual PagedResult<TEntity> Get(int currentPage, int pageSize, IQueryable<TEntity> query)
         {
+            pageSize = pageSize == 0 ? 10 : pageSize;
+            currentPage = currentPage == 0 ? 1 : currentPage;
             var result = new PagedResult<TEntity>();
             result.CurrentPage = currentPage;
             result.PageSize = pageSize;
@@ -87,14 +89,14 @@ namespace challenge.DAL
             return result;
         }
 
-        public IQueryable<TEntity> GetQuerable()
+        public virtual IQueryable<TEntity> GetQuerable()
         {
-            return CurrentDbSet.AsQueryable();
+            return _context.Set<TEntity>().AsQueryable();
         }
 
-        public TEntity Update(TEntity entity)
+        public virtual TEntity Update(TEntity entity)
         {
-            var updateEntity = CurrentDbSet.FirstOrDefault(e => e.Id == entity.Id);
+            var updateEntity = _context.Set<TEntity>().FirstOrDefault(e => e.Id == entity.Id);
             if (entity == null)
             {
                 var message = $"The entity with id {entity.Id}, not exist.\nEntity: {entity.ToString()}";
@@ -107,26 +109,36 @@ namespace challenge.DAL
             return updateEntity;
         }
 
-        public PagedResult<TEntity> Get(int currentPage, int pageSize, Func<TEntity, bool> expression)
+        public virtual PagedResult<TEntity> Get(int currentPage, int pageSize, Func<TEntity, bool> expression)
         {
+            var query = _context.Set<TEntity>();
+            pageSize = pageSize == 0 ? 10 : pageSize;
+            currentPage = currentPage == 0 ? 1 : currentPage;
             var result = new PagedResult<TEntity>();
             result.CurrentPage = currentPage;
-            result.PageSize = pageSize;
-            result.RowCount = CurrentDbSet.Count();
+            result.PageSize = pageSize;                       
 
             var pageCount = (double)result.RowCount / pageSize;
             result.PageCount = (int)Math.Ceiling(pageCount);
 
             var skip = (currentPage - 1) * pageSize;
 
-            result.Results = CurrentDbSet.Where(expression).Skip(skip).Take(pageSize).ToList();
+            result.Results = query.Where(expression).Skip(skip).Take(pageSize).ToList();
+
+            result.RowCount = _context.Set<TEntity>().Count(expression);
 
             return result;
         }
 
-        public TEntity Get(int id)
+        public virtual TEntity Get(int id)
         {
-            return CurrentDbSet.FirstOrDefault(e => e.Id == id);
+            return _context.Set<TEntity>().FirstOrDefault(e => e.Id == id);
+        }
+
+        public void Delete(int[] ids)
+        {
+            var entities = _context.Set<TEntity>().Where(d => ids.Contains(d.Id));
+            _context.Set<TEntity>().RemoveRange(entities);
         }
     }
 }

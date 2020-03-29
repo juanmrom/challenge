@@ -1,4 +1,36 @@
-<div class="row">
+<form class="example-form example-full-width">
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput [formControl]="userName" placeholder="Ex. pat@example.com">
+      <mat-error *ngIf="userName.hasError('email')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="userName.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput type="password" [formControl]="password">
+      <mat-error *ngIf="password.hasError('required')">
+        Password is <strong>required</strong>
+      </mat-error>
+      <mat-error *ngIf="password.hasError('minlength')">
+        Password must be more than 6 characters
+      </mat-error>
+      <mat-error *ngIf="password.hasError('maxlength')">
+        Password must be more less 15 characters
+      </mat-error>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button (click)="logIn()">LogIn</button>
+    &nbsp; &nbsp;
+    <button mat-raised-button color="primary" (click)="SetTestUser()">Set test user</button>
+  </div>
+</form>
+<!-- <div class="row">
   <div class="col-sm">
   </div>
   <div class="col-sm">
@@ -32,4 +64,4 @@
   </div>
   <div class="col-sm">
   </div>
-</div>
+</div> -->

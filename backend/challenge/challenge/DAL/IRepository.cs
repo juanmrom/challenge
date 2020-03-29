@@ -22,6 +22,7 @@ namespace challenge.DAL
         TEntity Add(TEntity entity);
         int Add(TEntity[] entities);
         TEntity Update(TEntity entity);
-        int Delete(int id);        
+        int Delete(int id);
+        void Delete(int[] id);
     }
 }

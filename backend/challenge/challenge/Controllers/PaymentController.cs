@@ -25,12 +25,29 @@ namespace challenge.Controllers
         }
 
 
-        [HttpGet]
-        public PagedResult<PaymentDto> GetPayments(int currentPage, int pageSize)
+        [HttpPost("GetPayments")]
+        public PagedResult<PaymentDto> GetPayments(PagedRequest pagedRequest)
         {
             var userId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.PrimarySid).Value;
-            return _paymentManager.GetPayments(currentPage, pageSize, int.Parse(userId));
+            return _paymentManager.GetPayments(pagedRequest.CurrentPage, pagedRequest.PageSize, int.Parse(userId));
         }
 
+        [HttpPost("DeletePayments")]
+        public void DeletePayments(int[] id)
+        {
+            _paymentManager.DeletePayments(id);
+        }
+
+        [HttpPut]
+        public void UpdatePayment(PaymentDto payment)
+        {
+            _paymentManager.UpdatePayment(payment);
+        }
+
+        [HttpDelete]
+        public void DeletePayment(int id)
+        {
+            _paymentManager.DeletePayment(id);
+        }
     }
 }

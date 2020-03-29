@@ -14,7 +14,7 @@ namespace challenge.DAL
         {
 
         }
-        public DbSet<PaymentType> CreditCards { get; set; }
+
         public DbSet<Address> Directions { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<User> Users { get; set; }
