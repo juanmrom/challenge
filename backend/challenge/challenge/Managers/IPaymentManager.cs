@@ -13,6 +13,8 @@ namespace challenge.Managers
         PagedResult<PaymentDto> GetPayments(int currentPage, int pageSize, int userId);
         void DeletePayments(int[] payments);
         void DeletePayment(int id);
-        void UpdatePayment(PaymentDto payment);
+        void UpdatePayment(int id, PaymentDto payment);
+        IEnumerable<TotalAmount> GetTotalAmount(int userId);
+        PaymentDto AddPayment(PaymentDto payment, int userId);
     }
 }

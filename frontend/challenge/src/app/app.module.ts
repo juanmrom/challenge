@@ -41,6 +41,9 @@ import { AddPaymentComponent } from './add-payment/add-payment.component';
       multi: true
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    AddPaymentComponent
+  ]
 })
 export class AppModule { }

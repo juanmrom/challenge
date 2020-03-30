@@ -4,4 +4,5 @@ export class Payment {
     paymentTypeName: string;
     placeName: string;
     amount: number;
+    paymentDate: Date;
 }

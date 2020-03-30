@@ -10,6 +10,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -26,8 +29,11 @@ import { MatInputModule } from '@angular/material/input';
     , MatCheckboxModule
     , MatSelectModule
     , MatInputModule
+    , MatDatepickerModule
+    , MatNativeDateModule
+    , MatDialogModule
   ],
-  exports:[
+  exports: [
     MatToolbarModule
     , MatIconModule
     , MatSidenavModule
@@ -38,6 +44,9 @@ import { MatInputModule } from '@angular/material/input';
     , MatCheckboxModule
     , MatSelectModule
     , MatInputModule
+    , MatDatepickerModule
+    , MatNativeDateModule
+    , MatDialogModule
   ]
 })
 export class MaterialModule { }

@@ -1,0 +1,702 @@
+[
+  {
+    "PlaceName": "Dui Suspendisse Ac PC",
+    "Amount": "5,641",
+    "PaymentDate": "1/15/2019",
+    "UserId": 3,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Sem Associates",
+    "Amount": "6,750",
+    "PaymentDate": "04/17/2020",
+    "UserId": 4,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Vel Quam Dignissim Foundation",
+    "Amount": "5,698",
+    "PaymentDate": "08/15/2019",
+    "UserId": 6,
+    "PaymentTypeId": 4
+  },
+  {
+    "PlaceName": "A Sollicitudin Orci Inc.",
+    "Amount": "6,767",
+    "PaymentDate": "04/07/2019",
+    "UserId": 2,
+    "PaymentTypeId": 2
+  },
+  {
+    "PlaceName": "Purus Gravida Industries",
+    "Amount": "8,793",
+    "PaymentDate": "1/05/2019",
+    "UserId": 1,
+    "PaymentTypeId": 9
+  },
+  {
+    "PlaceName": "Ligula Associates",
+    "Amount": "5,172",
+    "PaymentDate": "01/17/2021",
+    "UserId": 7,
+    "PaymentTypeId": 5
+  },
+  {
+    "PlaceName": "Mauris Non Dui Associates",
+    "Amount": "7,200",
+    "PaymentDate": "05/03/2019",
+    "UserId": 7,
+    "PaymentTypeId": 5
+  },
+  {
+    "PlaceName": "Donec Consectetuer Corp.",
+    "Amount": "6,237",
+    "PaymentDate": "12/12/2019",
+    "UserId": 1,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Urna Company",
+    "Amount": "8,339",
+    "PaymentDate": "04/15/2019",
+    "UserId": 3,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Nunc Inc.",
+    "Amount": "9,288",
+    "PaymentDate": "11/23/2020",
+    "UserId": 3,
+    "PaymentTypeId": 2
+  },
+  {
+    "PlaceName": "Consequat Lectus Sit Corp.",
+    "Amount": "5,878",
+    "PaymentDate": "08/13/2019",
+    "UserId": 3,
+    "PaymentTypeId": 3
+  },
+  {
+    "PlaceName": "Velit LLC",
+    "Amount": "8,802",
+    "PaymentDate": "02/05/2021",
+    "UserId": 7,
+    "PaymentTypeId": 3
+  },
+  {
+    "PlaceName": "Vel Faucibus Foundation",
+    "Amount": "8,884",
+    "PaymentDate": "12/17/2020",
+    "UserId": 2,
+    "PaymentTypeId": 5
+  },
+  {
+    "PlaceName": "Urna Industries",
+    "Amount": "9,000",
+    "PaymentDate": "01/30/2020",
+    "UserId": 9,
+    "PaymentTypeId": 7
+  },
+  {
+    "PlaceName": "Nulla Consulting",
+    "Amount": "5,040",
+    "PaymentDate": "07/24/2019",
+    "UserId": 1,
+    "PaymentTypeId": 9
+  },
+  {
+    "PlaceName": "Libero Ltd",
+    "Amount": "9,262",
+    "PaymentDate": "07/14/2019",
+    "UserId": 2,
+    "PaymentTypeId": 4
+  },
+  {
+    "PlaceName": "Vel Quam Dignissim Industries",
+    "Amount": "8,571",
+    "PaymentDate": "12/11/2019",
+    "UserId": 3,
+    "PaymentTypeId": 5
+  },
+  {
+    "PlaceName": "A Magna Inc.",
+    "Amount": "7,307",
+    "PaymentDate": "01/07/2020",
+    "UserId": 7,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Pellentesque Corporation",
+    "Amount": "6,190",
+    "PaymentDate": "06/07/2019",
+    "UserId": 6,
+    "PaymentTypeId": 2
+  },
+  {
+    "PlaceName": "Tristique Associates",
+    "Amount": "6,487",
+    "PaymentDate": "04/04/2019",
+    "UserId": 6,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Lorem PC",
+    "Amount": "5,044",
+    "PaymentDate": "12/30/2019",
+    "UserId": 6,
+    "PaymentTypeId": 5
+  },
+  {
+    "PlaceName": "Nec Mollis Associates",
+    "Amount": "9,222",
+    "PaymentDate": "1/20/2020",
+    "UserId": 7,
+    "PaymentTypeId": 2
+  },
+  {
+    "PlaceName": "Nunc Lectus Institute",
+    "Amount": "5,789",
+    "PaymentDate": "1/27/2020",
+    "UserId": 7,
+    "PaymentTypeId": 5
+  },
+  {
+    "PlaceName": "Risus In Incorporated",
+    "Amount": "5,220",
+    "PaymentDate": "04/01/2020",
+    "UserId": 5,
+    "PaymentTypeId": 9
+  },
+  {
+    "PlaceName": "A Facilisis Limited",
+    "Amount": "8,436",
+    "PaymentDate": "12/29/2020",
+    "UserId": 5,
+    "PaymentTypeId": 2
+  },
+  {
+    "PlaceName": "Egestas Ligula LLP",
+    "Amount": "9,668",
+    "PaymentDate": "12/29/2019",
+    "UserId": 1,
+    "PaymentTypeId": 9
+  },
+  {
+    "PlaceName": "Justo PC",
+    "Amount": "6,165",
+    "PaymentDate": "1/12/2020",
+    "UserId": 7,
+    "PaymentTypeId": 6
+  },
+  {
+    "PlaceName": "Porttitor Vulputate Posuere Industries",
+    "Amount": "9,974",
+    "PaymentDate": "1/30/2019",
+    "UserId": 4,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Sit Inc.",
+    "Amount": "5,450",
+    "PaymentDate": "11/25/2019",
+    "UserId": 4,
+    "PaymentTypeId": 2
+  },
+  {
+    "PlaceName": "Nibh Dolor Nonummy LLC",
+    "Amount": "8,316",
+    "PaymentDate": "07/24/2019",
+    "UserId": 6,
+    "PaymentTypeId": 6
+  },
+  {
+    "PlaceName": "Nunc Pulvinar Arcu Industries",
+    "Amount": "7,283",
+    "PaymentDate": "03/29/2019",
+    "UserId": 3,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Nulla Interdum Consulting",
+    "Amount": "9,335",
+    "PaymentDate": "11/23/2020",
+    "UserId": 8,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Vitae Corporation",
+    "Amount": "7,678",
+    "PaymentDate": "08/05/2019",
+    "UserId": 2,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Odio Incorporated",
+    "Amount": "9,315",
+    "PaymentDate": "08/12/2020",
+    "UserId": 5,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Massa Inc.",
+    "Amount": "8,033",
+    "PaymentDate": "09/05/2020",
+    "UserId": 1,
+    "PaymentTypeId": 3
+  },
+  {
+    "PlaceName": "Lacus Aliquam Rutrum LLP",
+    "Amount": "8,096",
+    "PaymentDate": "09/15/2019",
+    "UserId": 3,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Convallis In Institute",
+    "Amount": "7,481",
+    "PaymentDate": "09/24/2020",
+    "UserId": 2,
+    "PaymentTypeId": 6
+  },
+  {
+    "PlaceName": "Mi Ac Incorporated",
+    "Amount": "9,638",
+    "PaymentDate": "03/06/2020",
+    "UserId": 2,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "A Scelerisque Incorporated",
+    "Amount": "9,968",
+    "PaymentDate": "09/19/2019",
+    "UserId": 7,
+    "PaymentTypeId": 5
+  },
+  {
+    "PlaceName": "Molestie In Tempus LLC",
+    "Amount": "6,294",
+    "PaymentDate": "07/25/2019",
+    "UserId": 1,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Sed Pede Cum Ltd",
+    "Amount": "7,458",
+    "PaymentDate": "07/18/2020",
+    "UserId": 2,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Phasellus Elit Pede Industries",
+    "Amount": "6,41",
+    "PaymentDate": "01/27/2021",
+    "UserId": 9,
+    "PaymentTypeId": 4
+  },
+  {
+    "PlaceName": "Tellus Incorporated",
+    "Amount": "7,606",
+    "PaymentDate": "04/1/2020",
+    "UserId": 5,
+    "PaymentTypeId": 3
+  },
+  {
+    "PlaceName": "Tellus Lorem Eu LLC",
+    "Amount": "9,014",
+    "PaymentDate": "05/21/2019",
+    "UserId": 1,
+    "PaymentTypeId": 5
+  },
+  {
+    "PlaceName": "Lorem Donec Elementum Industries",
+    "Amount": "7,621",
+    "PaymentDate": "06/07/2020",
+    "UserId": 5,
+    "PaymentTypeId": 3
+  },
+  {
+    "PlaceName": "Senectus Inc.",
+    "Amount": "7,384",
+    "PaymentDate": "02/1/2020",
+    "UserId": 7,
+    "PaymentTypeId": 5
+  },
+  {
+    "PlaceName": "Risus Odio Auctor Associates",
+    "Amount": "6,409",
+    "PaymentDate": "06/29/2020",
+    "UserId": 6,
+    "PaymentTypeId": 7
+  },
+  {
+    "PlaceName": "Arcu Company",
+    "Amount": "9,787",
+    "PaymentDate": "11/09/2019",
+    "UserId": 3,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Eu Corporation",
+    "Amount": "8,995",
+    "PaymentDate": "12/27/2020",
+    "UserId": 1,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Mi Pede LLC",
+    "Amount": "6,095",
+    "PaymentDate": "1/07/2019",
+    "UserId": 7,
+    "PaymentTypeId": 6
+  },
+  {
+    "PlaceName": "Interdum Consulting",
+    "Amount": "6,085",
+    "PaymentDate": "06/28/2019",
+    "UserId": 8,
+    "PaymentTypeId": 2
+  },
+  {
+    "PlaceName": "Quisque Ornare Tortor Limited",
+    "Amount": "5,351",
+    "PaymentDate": "11/18/2020",
+    "UserId": 1,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Donec Porttitor Company",
+    "Amount": "6,234",
+    "PaymentDate": "07/11/2020",
+    "UserId": 7,
+    "PaymentTypeId": 7
+  },
+  {
+    "PlaceName": "Eget Laoreet Foundation",
+    "Amount": "6,049",
+    "PaymentDate": "09/12/2020",
+    "UserId": 7,
+    "PaymentTypeId": 9
+  },
+  {
+    "PlaceName": "Vel LLP",
+    "Amount": "9,341",
+    "PaymentDate": "11/18/2019",
+    "UserId": 9,
+    "PaymentTypeId": 6
+  },
+  {
+    "PlaceName": "Fermentum Convallis Consulting",
+    "Amount": "6,058",
+    "PaymentDate": "09/16/2020",
+    "UserId": 4,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Mauris Integer Sem Consulting",
+    "Amount": "7,483",
+    "PaymentDate": "11/29/2019",
+    "UserId": 1,
+    "PaymentTypeId": 5
+  },
+  {
+    "PlaceName": "Lacus Etiam PC",
+    "Amount": "7,871",
+    "PaymentDate": "07/23/2020",
+    "UserId": 9,
+    "PaymentTypeId": 4
+  },
+  {
+    "PlaceName": "Ac Orci Ut Limited",
+    "Amount": "6,055",
+    "PaymentDate": "11/29/2020",
+    "UserId": 3,
+    "PaymentTypeId": 7
+  },
+  {
+    "PlaceName": "Sem Pellentesque Ltd",
+    "Amount": "8,631",
+    "PaymentDate": "06/05/2020",
+    "UserId": 1,
+    "PaymentTypeId": 3
+  },
+  {
+    "PlaceName": "In Ltd",
+    "Amount": "9,028",
+    "PaymentDate": "03/05/2020",
+    "UserId": 5,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Lacus Pede PC",
+    "Amount": "6,504",
+    "PaymentDate": "12/17/2019",
+    "UserId": 5,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Feugiat Company",
+    "Amount": "7,484",
+    "PaymentDate": "08/05/2020",
+    "UserId": 7,
+    "PaymentTypeId": 4
+  },
+  {
+    "PlaceName": "Magnis Dis Industries",
+    "Amount": "8,147",
+    "PaymentDate": "06/28/2020",
+    "UserId": 3,
+    "PaymentTypeId": 9
+  },
+  {
+    "PlaceName": "In Faucibus Incorporated",
+    "Amount": "7,711",
+    "PaymentDate": "05/14/2020",
+    "UserId": 5,
+    "PaymentTypeId": 7
+  },
+  {
+    "PlaceName": "Ut Institute",
+    "Amount": "8,067",
+    "PaymentDate": "06/19/2020",
+    "UserId": 7,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Ullamcorper Incorporated",
+    "Amount": "9,361",
+    "PaymentDate": "07/01/2019",
+    "UserId": 3,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Odio Nam Interdum Industries",
+    "Amount": "8,224",
+    "PaymentDate": "07/03/2020",
+    "UserId": 5,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Viverra Maecenas Iaculis LLP",
+    "Amount": "5,567",
+    "PaymentDate": "01/30/2020",
+    "UserId": 1,
+    "PaymentTypeId": 5
+  },
+  {
+    "PlaceName": "Dui Augue Eu Consulting",
+    "Amount": "5,763",
+    "PaymentDate": "08/30/2020",
+    "UserId": 2,
+    "PaymentTypeId": 3
+  },
+  {
+    "PlaceName": "Porttitor Foundation",
+    "Amount": "6,497",
+    "PaymentDate": "04/15/2019",
+    "UserId": 8,
+    "PaymentTypeId": 7
+  },
+  {
+    "PlaceName": "Elit Elit Fermentum Incorporated",
+    "Amount": "6,254",
+    "PaymentDate": "05/22/2019",
+    "UserId": 6,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Ultrices Corporation",
+    "Amount": "7,143",
+    "PaymentDate": "01/22/2020",
+    "UserId": 2,
+    "PaymentTypeId": 3
+  },
+  {
+    "PlaceName": "Mauris Ut Industries",
+    "Amount": "8,977",
+    "PaymentDate": "01/04/2021",
+    "UserId": 3,
+    "PaymentTypeId": 4
+  },
+  {
+    "PlaceName": "Est Mauris Rhoncus Inc.",
+    "Amount": "9,608",
+    "PaymentDate": "01/30/2021",
+    "UserId": 4,
+    "PaymentTypeId": 5
+  },
+  {
+    "PlaceName": "Mauris Industries",
+    "Amount": "8,274",
+    "PaymentDate": "08/13/2019",
+    "UserId": 2,
+    "PaymentTypeId": 4
+  },
+  {
+    "PlaceName": "Iaculis Quis LLP",
+    "Amount": "9,049",
+    "PaymentDate": "12/13/2020",
+    "UserId": 1,
+    "PaymentTypeId": 5
+  },
+  {
+    "PlaceName": "Dignissim Maecenas Institute",
+    "Amount": "9,841",
+    "PaymentDate": "08/02/2020",
+    "UserId": 4,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Mauris Morbi Non Ltd",
+    "Amount": "7,264",
+    "PaymentDate": "06/20/2020",
+    "UserId": 1,
+    "PaymentTypeId": 3
+  },
+  {
+    "PlaceName": "Aenean Massa Integer Associates",
+    "Amount": "7,552",
+    "PaymentDate": "12/09/2019",
+    "UserId": 7,
+    "PaymentTypeId": 7
+  },
+  {
+    "PlaceName": "Erat Etiam LLP",
+    "Amount": "6,501",
+    "PaymentDate": "11/18/2019",
+    "UserId": 1,
+    "PaymentTypeId": 7
+  },
+  {
+    "PlaceName": "Sociis Natoque Foundation",
+    "Amount": "6,202",
+    "PaymentDate": "06/25/2019",
+    "UserId": 3,
+    "PaymentTypeId": 9
+  },
+  {
+    "PlaceName": "Ut Sagittis Consulting",
+    "Amount": "6,155",
+    "PaymentDate": "11/16/2019",
+    "UserId": 8,
+    "PaymentTypeId": 9
+  },
+  {
+    "PlaceName": "Donec Company",
+    "Amount": "5,607",
+    "PaymentDate": "07/20/2019",
+    "UserId": 3,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Cursus Luctus Ipsum Consulting",
+    "Amount": "8,01",
+    "PaymentDate": "11/22/2019",
+    "UserId": 6,
+    "PaymentTypeId": 9
+  },
+  {
+    "PlaceName": "Mi Industries",
+    "Amount": "8,667",
+    "PaymentDate": "07/11/2020",
+    "UserId": 1,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Eget PC",
+    "Amount": "6,203",
+    "PaymentDate": "05/03/2020",
+    "UserId": 6,
+    "PaymentTypeId": 5
+  },
+  {
+    "PlaceName": "Nunc Lectus Associates",
+    "Amount": "7,071",
+    "PaymentDate": "06/21/2020",
+    "UserId": 1,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Massa Foundation",
+    "Amount": "6,868",
+    "PaymentDate": "11/1/2019",
+    "UserId": 2,
+    "PaymentTypeId": 4
+  },
+  {
+    "PlaceName": "Amet Faucibus PC",
+    "Amount": "8,922",
+    "PaymentDate": "08/04/2020",
+    "UserId": 2,
+    "PaymentTypeId": 4
+  },
+  {
+    "PlaceName": "Aliquam Auctor Inc.",
+    "Amount": "8,461",
+    "PaymentDate": "03/26/2021",
+    "UserId": 9,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Ultrices Mauris Foundation",
+    "Amount": "6,501",
+    "PaymentDate": "09/1/2019",
+    "UserId": 1,
+    "PaymentTypeId": 4
+  },
+  {
+    "PlaceName": "Egestas Blandit Nam Incorporated",
+    "Amount": "7,058",
+    "PaymentDate": "03/16/2020",
+    "UserId": 8,
+    "PaymentTypeId": 9
+  },
+  {
+    "PlaceName": "Vivamus Euismod Inc.",
+    "Amount": "7,303",
+    "PaymentDate": "09/25/2019",
+    "UserId": 1,
+    "PaymentTypeId": 5
+  },
+  {
+    "PlaceName": "Tincidunt Vehicula Risus Associates",
+    "Amount": "6,976",
+    "PaymentDate": "04/27/2019",
+    "UserId": 8,
+    "PaymentTypeId": 9
+  },
+  {
+    "PlaceName": "Sit Amet Inc.",
+    "Amount": "5,847",
+    "PaymentDate": "1/14/2020",
+    "UserId": 3,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Diam Nunc Ullamcorper Foundation",
+    "Amount": "8,495",
+    "PaymentDate": "09/15/2019",
+    "UserId": 6,
+    "PaymentTypeId": 8
+  },
+  {
+    "PlaceName": "Phasellus Vitae Industries",
+    "Amount": "9,183",
+    "PaymentDate": "06/05/2020",
+    "UserId": 7,
+    "PaymentTypeId": 4
+  },
+  {
+    "PlaceName": "Cras Convallis Convallis Ltd",
+    "Amount": "5,286",
+    "PaymentDate": "02/15/2020",
+    "UserId": 5,
+    "PaymentTypeId": 1
+  },
+  {
+    "PlaceName": "Lorem LLP",
+    "Amount": "9,802",
+    "PaymentDate": "04/02/2019",
+    "UserId": 9,
+    "PaymentTypeId": 1
+  }
+]

@@ -1,24 +1,72 @@
-<form class="example-form example-full-width">
-  <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Payment type</mat-label>
-      <mat-select>
-        <mat-option *ngFor="let paymentType of paymentTypes" [value]="paymentType.paymentId">
-            {{ paymentType.name }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Place Name</mat-label>
-      <input matInput>
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Amount</mat-label>
-      <input matInput type="number" class="example-right-align">
-      <span matPrefix>$&nbsp;</span>
-      <span matSuffix>.00</span>
-    </mat-form-field> 
-  </div>
-</form>
+<h2 mat-dialog-title>Add Payment</h2>
+
+<mat-dialog-content>
+
+
+  <form [formGroup]="paymentForm" class="example-form example-full-width">
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Payment type</mat-label>
+        <mat-select formControlName="paymentTypes" id="paymentTypes">
+          <mat-option *ngFor="let pt of paymentTypesList" [value]="pt.paymentId">
+            {{ pt.name }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="paymentTypes.errors?.required">
+          Payment type is required
+        </mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label>Payment date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="paymentDate" id="paymentDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="paymentDate.errors?.required">
+          Payment date is required
+        </mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Place Name</mat-label>
+        <textarea matInput placeholder="Ex. Description or store name..." formControlName="paymentPlace"></textarea>
+        <mat-error *ngIf="paymentPlace.errors?.required">
+          Place name is required
+        </mat-error>
+        <mat-error *ngIf="paymentPlace.errors?.maxlength">
+          Place name must be less than 255
+        </mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Amount</mat-label>
+        <input matInput type="number" class="example-right-align" formControlName="paymentAmount">
+        <span matPrefix>$&nbsp;</span>
+        <mat-error *ngIf="paymentAmount.errors?.required">
+          Amount is required
+        </mat-error>
+        <mat-error *ngIf="paymentAmount.errors?.min">
+          Amount can not negativa value
+        </mat-error>
+        <mat-error *ngIf="paymentAmount.errors?.pattern">
+          Amount only permit 2 decimal
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="add()"
+        [disabled]="paymentForm.pristine || paymentForm.invalid"
+        *ngIf="!isEdit">
+        Add
+      </button>
+      <button mat-raised-button color="primary" (click)="edit()"
+        [disabled]="paymentForm.pristine || paymentForm.invalid"
+        *ngIf="isEdit">
+        Update
+      </button>
+
+      <button mat-raised-button (click)="close()">Close</button>
+</mat-dialog-actions>

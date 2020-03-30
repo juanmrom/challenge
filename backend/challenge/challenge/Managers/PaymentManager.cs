@@ -48,15 +48,43 @@ namespace challenge.Managers
             _paymentReposirotry.Delete(id);
         }
 
-        public void UpdatePayment(PaymentDto payment)
+        public void UpdatePayment(int id, PaymentDto payment)
         {
-            var updatePayment = _paymentReposirotry.Get(payment.Id);
+            var updatePayment = _paymentReposirotry.Get(id);
             updatePayment.Amount = payment.Amount;
             updatePayment.PaymentDate = payment.PaymentDate;
             updatePayment.PaymentTypeId = payment.PaymentTypeId;
             updatePayment.PlaceName = payment.PlaceName;
 
             _paymentReposirotry.Update(updatePayment);
+        }
+
+        public PaymentDto AddPayment(PaymentDto payment, int userId)
+        {
+           payment.Id = _paymentReposirotry.Add(new Payment()
+            {
+                Amount = payment.Amount,
+                PaymentDate = payment.PaymentDate,
+                PaymentTypeId = payment.PaymentTypeId,
+                PlaceName = payment.PlaceName,
+                UserId = userId
+            }).Id;
+            return payment;
+        }
+
+        public IEnumerable<TotalAmount> GetTotalAmount(int userId)
+        {
+            return _paymentReposirotry.GetQuerable()
+                .Where(m => 
+                    m.UserId == userId
+                )
+                .Select(t =>            
+                new TotalAmount()
+                {
+                    PaymentId = t.Id,
+                    Amount = t.Amount
+                }
+            );
         }
 
         protected PagedResult<PaymentDto> ConvertToPaymentDto(PagedResult<Payment> paymentsResult)

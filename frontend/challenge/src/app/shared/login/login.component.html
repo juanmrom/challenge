@@ -30,38 +30,3 @@
     <button mat-raised-button color="primary" (click)="SetTestUser()">Set test user</button>
   </div>
 </form>
-<!-- <div class="row">
-  <div class="col-sm">
-  </div>
-  <div class="col-sm">
-
-    <div class="form-group">
-      <label>User name</label>
-      <input type="email" class="form-control" [formControl]="userName" aria-describedby="emailHelp">
-      <div role="alert" *ngIf="userName.hasError('required')" [ngClass] = "'alert alert-danger'">
-        User name is required.
-      </div>
-      <div role="alert" *ngIf="userName.hasError('email')" [ngClass] = "'alert alert-danger'">
-        User name must be valid email.
-      </div>
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" [formControl]="password">
-      <div role="alert" *ngIf="password.hasError('required')" [ngClass] = "'alert alert-danger'">
-        Password is required.
-      </div>
-      <div role="alert" *ngIf="password.hasError('minlength')" [ngClass] = "'alert alert-danger'">
-        Password must be more than 6 characters.
-      </div>
-      <div role="alert" *ngIf="password.hasError('maxlength')" [ngClass] = "'alert alert-danger'">
-        Password must be more less 15 characters.
-      </div>
-    </div>
-    <button class="btn btn-primary" (click)="logIn()">LogIn</button>
-    <button class="btn btn-danger" (click)="SetTestUser()">Set test user</button>
-  </div>
-  <div class="col-sm">
-  </div>
-</div> -->
